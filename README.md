@@ -6,7 +6,7 @@
 Currently only support `Int`.
 
 Define `YourEnum`.
-```
+```swift
 enum YourEnum: Int, Enumerable {
     case one
     case two
@@ -17,15 +17,14 @@ enum YourEnum: Int, Enumerable {
 
 Get all elemnts.
 
-```
+```swift
 print(YourEnum.elements) // one, two, three, four
 print(YourEnum.count) // 4
 ```
 
 It is particularly compatible with `TableView` and `CollectionView``.
 
-```
-
+```swift
 enum RowType: Int, Enumerable {
     case one
     case two
