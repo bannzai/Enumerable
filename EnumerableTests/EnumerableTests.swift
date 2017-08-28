@@ -25,7 +25,7 @@ fileprivate enum FromOne: Int, Enumerable {
 fileprivate enum StringTest: String, Enumerable {
     case hoge
     case fuga
-    case piyo
+    case piyo = "Piyo"
 }
 
 class EnumerableTests: XCTestCase {
@@ -59,6 +59,13 @@ class EnumerableTests: XCTestCase {
         XCTAssertEqual(FromOne.elements.last!.rawValue, 3)
         XCTAssertEqual(FromOne.elements.count, 3)
         XCTAssertEqual(FromOne.count, FromOne.elements.count)
+    }
+    
+    func testStringElements() {
+        XCTAssertEqual(StringTest.elements.first!.rawValue, "hoge")
+        XCTAssertEqual(StringTest.elements.last!.rawValue, "Piyo")
+        XCTAssertEqual(StringTest.elements.count, 3)
+        XCTAssertEqual(StringTest.count, StringTest.elements.count)
     }
     
 }
