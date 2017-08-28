@@ -16,16 +16,16 @@ fileprivate enum FromZero: Int, Enumerable {
     case three
 }
 
-fileprivate enum FromOne: Int {
+fileprivate enum FromOne: Int, Enumerable {
     case one = 1
     case two
     case three
 }
 
-extension FromOne: Enumerable {
-    public static var startIndex: Int {
-        return 1
-    }
+fileprivate enum StringTest: String, Enumerable {
+    case hoge
+    case fuga
+    case piyo
 }
 
 class EnumerableTests: XCTestCase {
