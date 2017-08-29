@@ -22,7 +22,7 @@ print(YourEnum.elements) // one, two, three, four
 print(YourEnum.count) // 4
 ```
 
-It is particularly compatible with `TableView` and `CollectionView``.
+It is particularly compatible with `TableView` and `CollectionView`.
 
 ```swift
 enum RowType: Int, Enumerable {
