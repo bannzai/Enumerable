@@ -8,10 +8,10 @@ Currently only support `Int`.
 Define `YourEnum`.
 ```swift
 enum YourEnum: Int, Enumerable {
-    case one
-    case two
-    case three
-    case four
+  case one
+  case two
+  case three
+  case four
 }
 ```
 
@@ -26,27 +26,27 @@ It is particularly compatible with `TableView` and `CollectionView`.
 
 ```swift
 enum RowType: Int, Enumerable {
-	case one
-	case two
-	case three
-	case four
+  case one
+  case two
+  case three
+  case four
 }
 
 public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return RowType.count
+  return RowType.count
 }
 
 
 public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let item = RowType(rawValue: indexPath.item) else {
-        fatalError("out of section type: \(indexPath.section), model has sections: \(String(describing: model?.sections))")
-    }
-    switch item {
-        case .one:
-        case two:
-		...
-    }
-    ...
+  guard let item = RowType(rawValue: indexPath.item) else {
+    fatalError("out of section type: \(indexPath.section), model has sections: \(String(describing: model?.sections))")
+  }
+  switch item {
+    case .one:
+    case two:
+  ...
+  }
+  ...
 }
 
 ```
