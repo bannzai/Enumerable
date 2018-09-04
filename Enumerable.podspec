@@ -10,6 +10,9 @@ Pod::Spec.new do |s|
   s.name         = "Enumerable"
   s.version      = "0.0.1"
   s.summary      = "Swift Enum can enumerable."
+  s.description = <<-DESC
+                      Enumrable can get all the elements of Enum.
+                     DESC
   s.homepage     = "https://github.com/bannzai/Enumerable"
   s.license      = "MIT"
   s.author             = { "bannzai" => "kingkong999yhirose@gmail.com" }
