@@ -19,5 +19,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/bannzai/Enumerable.git", :commit => "e27286afd3c824d57d3287f1ff38242fdcf7b602" }
   s.source_files  = "Enumerable/*.swift"
   s.social_media_url   = "https://twitter.com/_bannzai_"
+  s.ios.deployment_target = '9.0'
   s.swift_version = '4.1'
 end
